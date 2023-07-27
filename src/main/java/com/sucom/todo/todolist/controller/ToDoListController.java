@@ -35,7 +35,7 @@ public class ToDoListController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("get")
+    @GetMapping("/get")
     public ResponseEntity<?> toDoGet() {
         return new ResponseEntity<>(toDoListService.toDoGet(), HttpStatus.OK);
     }
