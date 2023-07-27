@@ -14,4 +14,15 @@ public class ToDoListReqDto {
             this.title = title;
         }
     }
+
+    @Getter
+    @Setter
+    @NoArgsConstructor
+    public static class ToDoListPatchDto {
+        private String title;
+
+        public ToDoListPatchDto(String title) {
+            this.title = title;
+        }
+    }
 }

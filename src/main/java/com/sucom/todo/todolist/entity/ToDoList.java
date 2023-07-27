@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "todolist_tb")
