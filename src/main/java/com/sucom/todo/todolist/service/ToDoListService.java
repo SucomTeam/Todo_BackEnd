@@ -26,6 +26,7 @@ public class ToDoListService {
 
         ToDoList toDoList = toDoListRepository.findById(todoId).orElseThrow(() -> new RuntimeException("존재하지 않는 리뷰입니다."));
         toDoList.setTitle(patchDto.getTitle());
+        toDoList.setCompletion(patchDto.getCompletion());
 
         return toDoList;
     }

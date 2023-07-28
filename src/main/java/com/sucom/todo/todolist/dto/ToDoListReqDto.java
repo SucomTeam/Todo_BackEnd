@@ -20,9 +20,11 @@ public class ToDoListReqDto {
     @NoArgsConstructor
     public static class ToDoListPatchDto {
         private String title;
+        private int completion;
 
-        public ToDoListPatchDto(String title) {
+        public ToDoListPatchDto(String title, int completion) {
             this.title = title;
+            this.completion = completion;
         }
     }
 }
