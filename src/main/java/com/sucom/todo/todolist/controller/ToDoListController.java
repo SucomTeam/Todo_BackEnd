@@ -36,7 +36,7 @@ public class ToDoListController {
     }
 
     @GetMapping("/get")
-    public ResponseEntity<?> toDoGet() {
-        return new ResponseEntity<>(toDoListService.toDoGet(), HttpStatus.OK);
+    public ResponseEntity<?> toDoGet(@RequestParam(name = "completion", required = false) String completion) {
+        return new ResponseEntity<>(toDoListService.toDoGet(completion), HttpStatus.OK);
     }
 }

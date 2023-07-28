@@ -37,14 +37,15 @@ public class ToDoListService {
     }
 
     @Transactional
-    public List<ToDoList>  toDoGet() {
-
+    public List<ToDoList>  toDoGet(String completion) {
+        if (completion != null) {
+            return toDoListRepository.findByCompletion(Integer.parseInt(completion));
+        }
         return toDoListRepository.findAll();
     }
 
     @Transactional
     public ToDoList toDoGetOne(Long todoId) {
-
         return toDoListRepository.findById(todoId).orElseThrow(() -> new RuntimeException("존재하지 않는 리뷰입니다."));
     }
 }
